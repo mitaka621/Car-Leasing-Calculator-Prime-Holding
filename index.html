@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts.js"></script>
+</head>
+<body>
+    <main>
+        <div class="calculator-container">
+            <h1>Car Leasing Calculator</h1>
+            <form class="form-container">
+                <div class="left-container">
+                    <div class="form-group">
+                        <label for="carType">Car Type:</label>
+                        <select id="carType" name="carType">
+                            <option value="new">Brand New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="carValue">Car Value (€10,000 - €200,000):</label>
+                        <input type="text" id="carValue" name="carValue" value="120000">
+                    </div>
+                    <input class="slider" type="range" id="carValueRange" min="10000" max="200000" value="120000">
+                </div>
+                <div class="right-container">
+                    <div class="form-group">
+                        <label for="leasePeriod">Lease Period (months):</label>
+                        <select id="leasePeriod" name="leasePeriod">
+                            <option value="60">60</option>
+                            <option value="48">48</option>
+                            <option value="36">36</option>
+                            <option value="24">24</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="downPayment">Down Payment (10% - 50%):</label>
+                        <input type="text" disabled id="downPayment" name="downPayment" value="10">
+                    </div>                 
+                    <input class="slider"  type="range" id="downPaymentRange" min="10" max="50" step="5" value="10">
+                </div>           
+            </form>
+            <div>
+                <h2>Leasing Details</h2>
+                <div class="leasing-details">          
+                    <div class="details-left-cotnainer">
+                        <p>Total Leasing Cost: <span id="totalLeasingCost"></span></p>
+                        <p>Down Payment: <span id="downPaymentAmount"></span></p>
+                        
+                    </div>
+                    <div class="vl"></div>
+                    <div class="details-right-cotnainer">
+                        <p>Monthly Installment: <span id="monthlyInstallment"></span></p>
+                        <p>Interest Rate: <span id="interestRate"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main> 
+</body>
+</html>

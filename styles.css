@@ -1,0 +1,132 @@
+@media (max-width: 700px) {
+    .form-container{
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    main{
+        height: fit-content !important;
+    }
+
+    .calculator-container{
+        padding: 1em !important;
+        min-width: 250px;
+    }
+
+    .form-group input,
+    .form-group input:disabled,
+    .form-group select,
+    .form-group,
+    .left-container,
+    .right-container {
+        width: 100% !important;
+    }
+
+    input.slider{
+        width: 100% !important;
+    }
+    .leasing-details{
+        flex-direction: column;
+        gap: 0 !important;
+    }
+    .vl{
+        display: none;
+    }
+}
+main {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 95vh;
+    background-color: #f7f7f7;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding:1em 2em 2em 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group input:disabled,
+.form-group select {
+    width: 18em;
+    padding: 10px 10px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: black;
+}
+
+
+input.slider{
+    width: 90%;
+    margin-bottom: 2em;
+}
+
+.form-container{
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+.leasing-details {
+    text-align: left;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 4em;
+    padding-bottom: 1em;
+}
+
+.details-left-cotnainer, .details-right-cotnainer{
+    width: 100%;;
+}
+
+.vl {
+    border-left: 2px solid black;
+    height: 50px;
+}
+
+.leasing-details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.leasing-details p {
+    margin: 5px 0;
+}
+
+.leasing-details span {
+    font-weight: bold;
+}
+
+.leasing-details>span{
+    font-weight: 600;
+}
