@@ -24,9 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     carValueInput.addEventListener('blur', function() {
-        if (carValueInput.value<10000) {
+        let carValueInt=parseInt(carValueInput.value);
+        if (Number.isNaN(carValueInt)) {
             carValueInput.value=10000;
-        }else if(carValueInput.value>200000){
+            carValueRange.value=10000;
+            return;
+        }
+
+        if (carValueInt<10000) {
+            carValueInput.value=10000;
+        }else if(carValueInt>200000){
             carValueInput.value=200000;
         }
     });
